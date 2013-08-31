@@ -38,7 +38,7 @@ i.icon-plus-sign {
 .scrollable {
   overflow: auto;  
 }
-.submit {
+div.submit {
   border-top: solid 2px #777;
   padding-top: 10px;
   height: 25px;
@@ -88,6 +88,8 @@ section.collage .postcard {
   display: inline-block;
   margin: 0px 0px 15px 0px;
   overflow: hidden;
+  background: url('../images/plus.png') no-repeat center;
+  background-size: 30px 30px;
 }
 
 section.images div.submit {

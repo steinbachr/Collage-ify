@@ -12,16 +12,13 @@ $(document).ready(function() {
     });
     
     $COLLAGE.find('.postcard').each(function() {
-        var $droppable = dragDrop.droppable($(this));        
+        var $droppable = dragDrop.droppable($(this));
         dragDrop.bindDrop($droppable, function(event, ui) {
             var $draggable = ui.draggable;
-
-            /*remove the no picture placeholder*/
-            $droppable.find('i').addClass('gone');
             
             /*remove relative positioning on draggables then add them to the collage*/
             $draggable.css('position', 'static');
-            $droppable.append($draggable);
+            $droppable.append($draggable);            
             
             /*we want to still be able to move the draggable after we've dropped it, so reinitialize it*/
             dragDrop.draggable($draggable);
@@ -33,4 +30,12 @@ $(document).ready(function() {
             im.scaleMax($draggable, $droppable);
         });
     });   
+    
+    /*when the user wants to create the collage, send the post data*/
+    $('button.submit').click(function() {
+        var collageName = $('input[name="name"]').val();
+        $.post('/create/', JSON.stringify(dragDrop.createJson(collageName)), function(data) {
+            alert("worked!");
+        });        
+    })
 })

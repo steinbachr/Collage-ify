@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
+{% block nav_button %}
+<a href="{% url 'collage.collageapp.views.collages_list' %}" class="pull-right btn btn-info">All Collages</a>
+{% endblock %}
+
 {% block body %}
-<div class="header">
-    <a href="{% url 'collage.collageapp.views.collages_list' %}" class="pull-right btn btn-info">All Collages</a>
-    <h1>Collagify your life now</h1>    
-</div>
 <div class="container">
     <section class="images pull-left">
         <div class="images-container scrollable">
@@ -32,15 +32,14 @@
           <div class="postcards-container scrollable">
               {% for postcard in postcards %}
                 <h4>{{ postcard.width }} x {{ postcard.height }}</h4>
-                <div class="postcard droppable" style="width:{{ postcard.width }}px;height:{{ postcard.height }}px;">          
-                  <i class="icon-plus-sign"></i>
+                <div class="postcard droppable" style="width:{{ postcard.width }}px;height:{{ postcard.height }}px;">                            
                 </div>
                 <div class="clearfix"></div>
               {% endfor %}
           </div>
       </form>
       <div class="submit">
-        <button class="btn btn-primary">Collage-ify!</button>
+        <button class="submit btn btn-primary">Collage-ify!</button>
       </div>
     </section>    
 </div>

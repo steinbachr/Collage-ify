@@ -9,6 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('collage.collageapp.views',
     # Examples:
     url(r'^$', 'home'),
+    url(r'^create/$', 'create_collage'),
     url(r'^collages/$', 'collages_list'),        
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -62,7 +62,12 @@ var images = function() {
 }
 
 /*A closure around everything having to do with drag / drop interactions*/
-var dragandrop = function() {        
+var dragandrop = function() {  
+    var help = helpers();
+    
+    /*PRIVATE VARIABLE: the droppables*/
+    var $droppables = [];
+    
     /*create and return a new draggable object*/
     var createDraggable = function($el, extraOptions) {
         var $newDraggable = $el.draggable({ containment: ".container", revert : 'invalid', helper: "clone" });
@@ -72,6 +77,7 @@ var dragandrop = function() {
     /*create and return a new droppable object*/
     var createDroppable = function($el) {
         var $newDroppable = $el.droppable({ tolerance: "pointer" });
+        $droppables.push($newDroppable);
         return $newDroppable;
     }
     
@@ -89,7 +95,24 @@ var dragandrop = function() {
         });
     }
     
-    return {draggable : createDraggable, droppable : createDroppable, bindDrop : onDrop, bindDrag : onDrag};
+    /*create the json data for the post*/
+    var createJson = function(collageName) {
+        var jsonData = {name: collageName, data: []};
+        for (var i = 0, j = $droppables.length ; i < j ; i++) {
+            /*first check if the droppable has an image dropped on it*/
+            var image = $droppables[i].find('img').length > 0 ? $droppables[i].find('img').first() : null;
+            if (image != null ) {
+                jsonData.data.push({postcard_width : help.getDimensions($droppables[i]).width, 
+                                    postcard_height : help.getDimensions($droppables[i]).height,
+                                    image : $(image).attr('src')});
+            }                            
+        }                
+        
+        return jsonData;
+    }
+    
+    return {draggable : createDraggable, droppable : createDroppable, 
+            bindDrop : onDrop, bindDrag : onDrag, createJson : createJson};
 }
 
 

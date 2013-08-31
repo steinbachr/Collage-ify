@@ -8,10 +8,15 @@
   <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}styles/stylesheet.css" />  
   <script src="{{ STATIC_URL }}js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui-1.10.3.custom.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/json2.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/modules.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/scripts.js"></script>
 </head>
 <body>
+<div class="header">
+  {% block nav_button %}{% endblock %}
+  <h1>Collagify your life now</h1>
+</div>
 {% block body %}
 {% endblock %}
 </body>

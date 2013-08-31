@@ -1,1 +1,13 @@
 {% extends 'base.html' %}
+
+{% block nav_button %}
+  <a href="{% url 'collage.collageapp.views.home' %}" class="pull-right btn btn-info">Home</a>
+{% endblock %}
+{% block body %}
+  <ul>
+    {% for collage in collages %}
+      
+      <li><img src="{{ collage.cover_photo }}" /><a href="#" id="{{ collage.id }}">{% if collage.name %}{{ collage.name }}{% else %}[no name]{% endif %}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

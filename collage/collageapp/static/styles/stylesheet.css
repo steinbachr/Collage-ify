@@ -106,3 +106,19 @@ section.images .images-container {
   height: 370px;
 }
 
+section.collages-list {
+  border: none;
+  padding: 20px;
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+section.collages-list .list-holder {
+  margin: auto;
+  text-align: center;
+}
+section.collages-list .list-holder ul li {
+  float: none;
+  border-bottom: solid 2px #444;
+}
+

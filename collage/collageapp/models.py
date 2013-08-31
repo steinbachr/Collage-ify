@@ -7,9 +7,10 @@ class Collage(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     
     @property
-    def cover_photo(self):
-        first_card = self.postcards[0]
-        return first_card.picture.url
+    def cover_photo(self):        
+        first_card = self.postcards.all()[0]        
+        
+        return first_card.picture.src.url
 
 class Picture(models.Model):
     src = models.ImageField(upload_to="images")

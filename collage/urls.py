@@ -10,7 +10,8 @@ urlpatterns = patterns('collage.collageapp.views',
     # Examples:
     url(r'^$', 'home'),
     url(r'^create/$', 'create_collage'),
-    url(r'^collages/$', 'collages_list'),        
+    url(r'^collages/$', 'collages_list'),
+    url(r'^collage/(?P<c_id>\d+)/$', 'collage_details'),    
 
     # Uncomment the admin/doc line below to enable admin documentation:
 #    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

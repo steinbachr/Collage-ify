@@ -9,7 +9,7 @@
       <ul>
         {% for collage in collages %}      
           <li style="background: url('{{ collage.cover_photo }}') no-repeat center; background-size: cover;">            
-            <a href="#" id="{{ collage.id }}" class="btn btn-primary">{% if collage.name %}{{ collage.name }}{% else %}[no name]{% endif %}</a>            
+            <a href="{% url 'collage.collageapp.views.collage_details' collage.id %}" class="btn btn-primary btn-large">{% if collage.name %}{{ collage.name }}{% else %}[no name]{% endif %}</a>            
           </li>
         {% endfor %}
       </ul>

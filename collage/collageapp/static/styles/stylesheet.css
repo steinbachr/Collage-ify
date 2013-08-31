@@ -46,6 +46,10 @@ div.submit {
 h4.inline {
   display: inline-block;
 }
+.inline-section {
+  display: inline-block;
+  width: 500px;
+}
 
 /*LISTS*/
 ul {
@@ -58,9 +62,7 @@ ul li {
 }
 
 /*SECTION STYLES*/
-section {
-  display: inline-block;
-  width: 500px;
+section {   
   height: 400px;
   border: dashed 2px #ccc;
   padding: 0px 0px 30px 0px;
@@ -120,5 +122,32 @@ section.collages-list .list-holder {
 section.collages-list .list-holder ul li {
   float: none;
   border-bottom: solid 2px #444;
+  padding: 10px;  
+}
+section.collages-list .list-holder ul li a {
+  width: 130px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+section.collage-details {
+  border: none;
+  width: 60%;
+  margin: auto;
+}
+section.collage-details h2 {  
+  text-align: center;
+  margin-top: 30px;
+  border-bottom: solid 20px #CD4;
+}
+section.collage-details li {
+  padding: 10px;
+  float: none;
+  display: inline-block;
+}
+section.collage-details .collage-details-postcards {
+  width: 40%;
+  margin: auto;
 }
 

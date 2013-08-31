@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block nav_button %}
+  <a href="{% url 'collage.collageapp.views.collages_list' %}" class="pull-right btn btn-info">All Collages</a>
+{% endblock %}
+{% block body %}
+  <section class="collage-details">
+    <h2>{% if collage.name %}{{ collage.name }}{% else %}[no name]{% endif %}</h2>
+    <div class="collage-details-postcards">
+        <ul>
+            {% for postcard in collage.postcards.all %}
+              <li>
+                <div style="width:{{ postcard.width }}px; height:{{ postcard.height }}px;">
+                  <img src="{{ postcard.picture.src.url }}" />
+                </div>
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
+  </section>
+{% endblock %}

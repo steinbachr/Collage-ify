@@ -6,7 +6,7 @@
 
 {% block body %}
 <div class="container">
-    <section class="images pull-left">
+    <section class="images inline-section pull-left">
         <div class="images-container scrollable">
             <ul>
               {% for picture in pictures %}
@@ -26,7 +26,7 @@
     <span class="drag-icon wobble animated infinite">
         <i class="icon-hand-right"></i>
     </span>
-    <section class="collage pull-right">      
+    <section class="collage inline-section pull-right">      
       <form method="post">
           <div class="name"><h4>Name your collage:</h4> <input type="text" name="name" /></div>   
           <div class="postcards-container scrollable">
@@ -42,5 +42,9 @@
         <button class="submit btn btn-primary">Collage-ify!</button>
       </div>
     </section>    
+    <div class="clearfix"></div>
+    <div class="collage-alert alert alert-success gone">
+      Successfully created collage, visit it <a href="{% url 'collage.collageapp.views.collage_details' 0 %}" class="alert-link">here</a>
+    </div>
 </div>
 {% endblock %}

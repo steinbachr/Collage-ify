@@ -25,6 +25,10 @@ def collages_list(request):
     
     return render(request, 'collages.html', {'collages' : collages})
 
+def collage_details(request, c_id=None):
+    collage = Collage.objects.get(pk=c_id)
+    
+    return render(request, 'collage.html', {'collage' : collage})
 
 #AJAX REQUESTS
 def create_collage(request):    
@@ -44,4 +48,4 @@ def create_collage(request):
                             collage=collage, picture=Picture.objects.filter(src=postcard_image).get())
         postcard.save()                        
         
-    return HttpResponse("this is a test")
+    return HttpResponse(json.dumps({'collage_id' : collage.id}))

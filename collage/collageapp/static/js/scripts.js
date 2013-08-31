@@ -15,7 +15,7 @@ $(document).ready(function() {
         var $droppable = dragDrop.droppable($(this));
         dragDrop.bindDrop($droppable, function(event, ui) {
             var $draggable = ui.draggable;
-            
+                        
             /*remove relative positioning on draggables then add them to the collage*/
             $draggable.css('position', 'static');
             $droppable.append($draggable);            
@@ -35,7 +35,11 @@ $(document).ready(function() {
     $('button.submit').click(function() {
         var collageName = $('input[name="name"]').val();
         $.post('/create/', JSON.stringify(dragDrop.createJson(collageName)), function(data) {
-            alert("worked!");
+            $('.collage-alert').removeClass('gone');
+            /*replace the placeholder collage id in the collage alert link to the collage with the actual id*/
+            var collageId = $.parseJSON(data).collage_id;
+            var collageUrl = $('.collage-alert a').attr('href');
+            $('.collage-alert a').attr('href', collageUrl.replace(/\d+/, collageId));
         });        
     })
 })

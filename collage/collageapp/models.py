@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+import Image
 import random
 
 class Collage(models.Model):
@@ -43,7 +44,18 @@ class Postcard(models.Model):
     
     
 class Picture(models.Model):
-    src = models.ImageField(upload_to="images")     
+    src = models.ImageField(upload_to="images")
+    
+    @property
+    def thumbnail(self):
+        #stupid and hacky..
+        SUPER_SCALE_DOWN = .1
+        SCALE_DOWN = .2                
+        width = self.src.width
+        height = self.src.height
+        
+        return {'width' : width * SCALE_DOWN if width < 1500 else width * SUPER_SCALE_DOWN, 
+                'height' : height * SCALE_DOWN if height < 1500 else height * SUPER_SCALE_DOWN}
 
 class PostcardPicture(models.Model):
     postcard = models.ForeignKey(Postcard)

@@ -5,11 +5,6 @@ $(document).ready(function() {
     var help = helpers();
     var im = images();
     var dragDrop = dragandrop();
-
-    /*resize all the images to be smaller so they fit in the box*/
-    $('img').load(function() {        
-        im.scale($(this), .2);            
-    });  
     
     /*create the drag/drop areas and bind appropriately*/
     $( ".images ul li img" ).each(function() {

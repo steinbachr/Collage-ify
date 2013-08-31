@@ -10,14 +10,16 @@
         <div class="images-container scrollable">
             <ul>
               {% for picture in pictures %}
-                <li><img src="{{ picture.src.url }}" alt="cage"/></li>
+                <li>                
+                    <img src="{{ picture.src.url }}" width="{{ picture.thumbnail.width }}" height="{{ picture.thumbnail.height }}" alt="nick"/>                  
+                </li>
               {% endfor %}
             </ul>
         </div>
         <div class="submit">
             <form method="post" enctype="multipart/form-data">
               <h4 class="inline">upload pic</h4>{{ pic_form.src }}
-              <input type="submit" class="btn btn-success" value="finish" />
+              <input type="submit" class="btn btn-success" value="upload" />
             </form>
         </div>
     </section> 

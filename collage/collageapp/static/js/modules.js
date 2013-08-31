@@ -65,7 +65,7 @@ var images = function() {
 var dragandrop = function() {        
     /*create and return a new draggable object*/
     var createDraggable = function($el, extraOptions) {
-        var $newDraggable = $el.draggable({ containment: ".container", revert : 'invalid'});
+        var $newDraggable = $el.draggable({ containment: ".container", revert : 'invalid', helper: "clone" });
         return $newDraggable;
     }
     

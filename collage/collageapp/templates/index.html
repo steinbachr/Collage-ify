@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="header">
+    <a href="{% url 'collage.collageapp.views.collages_list' %}" class="pull-right btn btn-info">All Collages</a>
+    <h1>Collagify your life now</h1>    
+</div>
+<div class="container">
+    <section class="images pull-left">
+        <div class="images-container scrollable">
+            <ul>
+              {% for picture in pictures %}
+                <li><img src="{{ picture.src.url }}" alt="cage"/></li>
+              {% endfor %}
+            </ul>
+        </div>
+        <div class="submit">
+            <form method="post" enctype="multipart/form-data">
+              <h4 class="inline">upload pic</h4>{{ pic_form.src }}
+              <input type="submit" class="btn btn-success" value="finish" />
+            </form>
+        </div>
+    </section> 
+    <span class="drag-icon wobble animated infinite">
+        <i class="icon-hand-right"></i>
+    </span>
+    <section class="collage pull-right">      
+      <form method="post">
+          <div class="name"><h4>Name your collage:</h4> <input type="text" name="name" /></div>   
+          <div class="postcards-container scrollable">
+              {% for postcard in postcards %}
+                <h4>{{ postcard.width }} x {{ postcard.height }}</h4>
+                <div class="postcard droppable" style="width:{{ postcard.width }}px;height:{{ postcard.height }}px;">          
+                  <i class="icon-plus-sign"></i>
+                </div>
+                <div class="clearfix"></div>
+              {% endfor %}
+          </div>
+      </form>
+      <div class="submit">
+        <button class="btn btn-primary">Collage-ify!</button>
+      </div>
+    </section>    
+</div>
+{% endblock %}

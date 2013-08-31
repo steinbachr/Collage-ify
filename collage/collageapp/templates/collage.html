@@ -4,8 +4,43 @@
   <a href="{% url 'collage.collageapp.views.collages_list' %}" class="pull-right btn btn-info">All Collages</a>
 {% endblock %}
 {% block body %}
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      // init the FB JS SDK
+      FB.init({
+        appId      : '1420582858167239',                        // App ID from the app dashboard
+        channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true                                  // Look for social plugins on the page
+      });
+
+      // Additional initialization code such as adding Event Listeners goes here
+      $('.fb-share').click(function() {
+        FB.ui({
+          method: 'feed',
+          link: document.URL,
+          picture: 'http://i.imgur.com/YeCVGLI.png',
+          name: '{{ collage.name }}',
+          caption: 'Check out my awesome collage!',
+          description: 'I just created an awesome collage on Collage-ify, check it out!'
+        }, function(response){});      
+      });      
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  
   <section class="collage-details">
-    <h2>{% if collage.name %}{{ collage.name }}{% else %}[no name]{% endif %}</h2>
+    <button class="fb-share btn btn-primary">Share</button>
+    <h2>{% if collage.name %}{{ collage.name }}{% else %}[no name]{% endif %}</h2>    
     <div class="collage-details-postcards">
         <ul>
             {% for postcard in collage.postcards.all %}

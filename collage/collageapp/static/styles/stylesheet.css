@@ -132,9 +132,12 @@ section.collages-list .list-holder ul li a {
 }
 
 section.collage-details {
-  border: none;
-  width: 60%;
-  margin: auto;
+   border: none;
+   width: 60%;
+   margin: auto;
+ }
+section.collage-details .fb-share {
+  float: right;
 }
 section.collage-details h2 {  
   text-align: center;

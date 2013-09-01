@@ -37,6 +37,7 @@ i.icon-plus-sign {
 }
 .scrollable {
   overflow: auto;  
+  overflow-x: hidden;
 }
 div.submit {
   border-top: solid 2px #777;

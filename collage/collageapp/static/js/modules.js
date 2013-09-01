@@ -67,6 +67,11 @@ var dragandrop = function() {
     
     /*PRIVATE VARIABLE: the droppables*/
     var $droppables = [];
+
+    /*called when the user chooses to reset the collage*/
+    var reset = function() {
+        $droppables = [];
+    }
     
     /*create and return a new draggable object*/
     var createDraggable = function($el, extraOptions) {
@@ -95,20 +100,9 @@ var dragandrop = function() {
         });
     }
     
-    /*swap the images in two droppables*/
-    var swapDraggables = function($droppable1, $droppable2) {
-        var $firstImage = $droppable1.find('img').first();
-        var $secondImage = $droppable2.find('img').first();
-        
-        $droppable1.append($secondImage);
-        $droppable2.append($firstImage)
-        $droppable1.remove($firstImage);
-        $droppable1.remove($secondImage);
-    }
-    
     /*check if a droppable is occupied by an image*/
     var droppableTaken = function($droppable) {
-        return $droppable.find('img').length > 0;
+        return $droppable.hasClass('taken');
     }
     
     /*create the json data for the post*/
@@ -127,9 +121,8 @@ var dragandrop = function() {
         return jsonData;
     }
     
-    return {draggable : createDraggable, droppable : createDroppable, 
-            bindDrop : onDrop, bindDrag : onDrag, swap : swapDraggables, 
-            droppableTaken : droppableTaken, createJson : createJson};
+    return {reset : reset, draggable : createDraggable, droppable : createDroppable, 
+            bindDrop : onDrop, bindDrag : onDrag,  taken : droppableTaken, createJson : createJson};
 }
 
 

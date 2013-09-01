@@ -7,16 +7,16 @@
     <file path="/views.py" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377983052304" ignored="false" />
     <file path="/models.py" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377979462348" ignored="false" />
     <file path="/settings.py" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377925422121" ignored="false" />
-    <file path="/index.html" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378006465923" ignored="false" />
+    <file path="/index.html" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378008324510" ignored="false" />
     <file path="/urls.py" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377982492933" ignored="false" />
-    <file path="/stylesheet.css" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378002894862" ignored="false" />
+    <file path="/stylesheet.css" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378008289634" ignored="false" />
     <file path="/animate-custom.css" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377903995135" ignored="false" />
-    <file path="/scripts.js" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378007127996" ignored="false" />
-    <file path="/modules.js" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378007116710" ignored="false" />
+    <file path="/scripts.js" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378011011328" ignored="false" />
+    <file path="/modules.js" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378011761427" ignored="false" />
     <file path="/base.html" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377978336269" ignored="false" />
     <file path="/collages.html" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377983814087" ignored="false" />
     <file path="/forms.py" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377921375195" ignored="false" />
-    <file path="/collage.html" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1377987768193" ignored="false" />
+    <file path="/collage.html" changelist="1b2e2bc9-2ed4-4957-a68c-7296e712d8a0" time="1378011945664" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collage/collageapp/static/styles/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="21" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+            <state line="56" column="20" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,16 +114,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collage/collageapp/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="18" selection-start="1877" selection-end="1877" vertical-scroll-proportion="-17.666666">
+            <state line="23" column="14" selection-start="933" selection-end="933" vertical-scroll-proportion="-14.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collage/collageapp/static/js/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="5" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.78434503">
+            <state line="32" column="32" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,8 +132,19 @@
       <file leaf-file-name="modules.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collage/collageapp/static/js/modules.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="24" selection-start="4198" selection-end="4198" vertical-scroll-proportion="0.0">
+            <state line="46" column="5" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collage.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/collage/collageapp/templates/collage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="25" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.47674417">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,11 +167,11 @@
         <option value="$PROJECT_DIR$/collage/urls.py" />
         <option value="$PROJECT_DIR$/collage/collageapp/views.py" />
         <option value="$PROJECT_DIR$/collage/collageapp/templates/collages.html" />
-        <option value="$PROJECT_DIR$/collage/collageapp/templates/collage.html" />
         <option value="$PROJECT_DIR$/collage/collageapp/static/styles/stylesheet.css" />
         <option value="$PROJECT_DIR$/collage/collageapp/templates/index.html" />
-        <option value="$PROJECT_DIR$/collage/collageapp/static/js/modules.js" />
         <option value="$PROJECT_DIR$/collage/collageapp/static/js/scripts.js" />
+        <option value="$PROJECT_DIR$/collage/collageapp/static/js/modules.js" />
+        <option value="$PROJECT_DIR$/collage/collageapp/templates/collage.html" />
       </list>
     </option>
   </component>
@@ -262,28 +273,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collageapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collage/collageapp/static/styles/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="21" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/collage/collageapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="41" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
@@ -556,9 +538,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collage/collageapp/templates/collage.html">
+    <entry file="file://$PROJECT_DIR$/collage/collageapp/static/styles/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="42" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.4435216">
+        <state line="56" column="20" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -572,22 +554,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/collage/collageapp/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="1877" selection-end="1877" vertical-scroll-proportion="-17.666666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collage/collageapp/static/js/modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="24" selection-start="4198" selection-end="4198" vertical-scroll-proportion="0.0">
+        <state line="23" column="14" selection-start="933" selection-end="933" vertical-scroll-proportion="-14.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/collage/collageapp/static/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="5" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.78434503">
+        <state line="32" column="32" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collage/collageapp/static/js/modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="5" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collage/collageapp/templates/collage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="25" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.47674417">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

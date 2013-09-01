@@ -52,6 +52,11 @@ h4.inline {
   width: 500px;
 }
 
+/*BUTTONS*/
+button.cancel {
+  margin-left: 15px;
+}
+
 /*LISTS*/
 ul {
   list-style-type: none;

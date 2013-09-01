@@ -42,8 +42,8 @@ var images = function() {
         var origHeight = getDimensions($img).height;
         var origWidth = getDimensions($img).width;
         
-        $img.css('height', origHeight * scaleFactor);
-        $img.css('width', origWidth * scaleFactor);
+        $img.height(origHeight * scaleFactor);
+        $img.width(origWidth * scaleFactor);
     }
     
     /*scale an image to entirey fill a container without losing its aspect ratio*/
@@ -104,6 +104,7 @@ var dragandrop = function() {
     var droppableTaken = function($droppable) {
         return $droppable.hasClass('taken');
     }
+    
     
     /*create the json data for the post*/
     var createJson = function(collageName) {

@@ -19,13 +19,15 @@ $(document).ready(function() {
         $COLLAGE.find('.postcard').each(function() {
             var $droppable = dragDrop.droppable($(this));
             dragDrop.bindDrop($droppable, function(event, ui) {
-                var $draggable = ui.draggable;
+                var $draggable = $(ui.draggable).draggable("widget");
 
                 /*if the droppable is taken, swap its draggable with the draggable being moved*/
                 if (dragDrop.taken($droppable)) {
-                    var $origDroppable = $('.moving');
-                    $origDroppable.append($droppable.find('img'));
-                    $origDroppable.removeClass('moving');
+                    var $origDrop = $('.moving').droppable( "widget" );
+                    var $newDrag = $droppable.find('img').first().draggable("widget");
+                    $origDrop.append($newDrag);
+                    $origDrop.removeClass('moving');
+                    im.scaleMax($newDrag, $origDrop);
                 }
 
                 /*remove relative positioning on draggables then add them to the collage*/
